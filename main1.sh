@@ -1,12 +1,12 @@
-BITRATE="256k" # Bitrate of the output video
-FPS="24" # FPS video output
+BITRATE="487k" # Bitrate of the output video
+FPS="23" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="https://images.hdqwalls.com/download/hartsune-miku-vocaloid-anime-girl-5k-1z-1280x720.jpg" #Picture
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
-SIZE="1280x720"
-FRAMERATE="2"
+SIZE="720x480"
+FRAMERATE="1"
 
     ffmpeg -re -loop 1 \
     	-framerate "$FRAMERATE" \
