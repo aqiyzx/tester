@@ -1,5 +1,5 @@
 BITRATE="2500k" # Bitrate of the output video
-FPS="24" # FPS video output
+FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="https://images.hdqwalls.com/download/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Picture
