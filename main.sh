@@ -28,7 +28,7 @@ FRAMERATE="1"
     	-strict experimental \
     	-f flv \
     	"$YOUTUBE_URL/$KEY"
-     ffplay -f lavfi color=c=pink
+     ffplay -f lavfi color=c=Black
      [https://streamingv2.shoutcast.com/japanimradio-osaka]:display_number.screen_number[+x_offset,y_offset]
      
 #
