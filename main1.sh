@@ -1,5 +1,5 @@
 BITRATE="1000k" # Bitrate of the output video
-FPS="23" # FPS video output
+FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="https://images.hdqwalls.com/download/hartsune-miku-vocaloid-anime-girl-5k-1z-1280x720.jpg" #Picture
