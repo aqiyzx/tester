@@ -29,6 +29,7 @@ FRAMERATE="1"
     	-f flv \
     	"$YOUTUBE_URL/$KEY"
     ffplay -f lavfi color=c=Black \
+    [http://curiosity.shoutca.st:8019/stream]:display_number.screen_number[+x_offset,y_offset]
    
 #
 #  Created by Roman on 04/22/2019.
