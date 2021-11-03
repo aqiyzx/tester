@@ -1,12 +1,12 @@
-BITRATE="2500k" # Bitrate of the output video
-FPS="30" # FPS video output
+BITRATE="276k" # Bitrate of the output video
+FPS="24" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
-IMAGE="C:\Users\Aqil\Pictures\670838.jpg" #Picture
-SOURCE="https://open.spotify.com/playlist/6kjG3b4oH9B3w9ptdcnZxN" # Radio Station
+IMAGE="https://images.hdqwalls.com/download/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Picture
+SOURCE="https://streamingv2.shoutcast.com/japanimradio-osaka" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="1280×720"
-FRAMERATE="24"
+FRAMERATE="1"
 
     ffmpeg -re -loop 1 \
     	-framerate "$FRAMERATE" \
