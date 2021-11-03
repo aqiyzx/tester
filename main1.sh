@@ -1,4 +1,4 @@
-BITRATE="1500k" # Bitrate of the output video
+BITRATE="2500k" # Bitrate of the output video
 FPS="24" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
