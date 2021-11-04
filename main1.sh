@@ -26,7 +26,6 @@ FRAMERATE="2"
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
-        -fflags nobuffer \
     	-f flv \
     	"$YOUTUBE_URL/$KEY"
      ffplay -fflags nobuffer -flags low_delay -framedrop \
