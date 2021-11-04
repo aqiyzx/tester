@@ -6,7 +6,7 @@ IMAGE="https://images.hdqwalls.com/download/hartsune-miku-vocaloid-anime-girl-5k
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="720x480"
-FRAMERATE="1"
+FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
     	-framerate "$FRAMERATE" \
