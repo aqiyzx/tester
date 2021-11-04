@@ -19,7 +19,7 @@ FRAMERATE="2"
     	-threads 6 \
     	-qscale 3 \
     	-preset veryfast \
-    	-vcodec libx265 \
+    	-vcodec libx264 \
     	-pix_fmt yuv420p \
     	-maxrate 2300k \
     	-bufsize 5000k \
