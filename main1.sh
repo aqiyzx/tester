@@ -8,7 +8,7 @@ KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="980x720"
 FRAMERATE="2"
 
-    ffmpeg -f concat -safe 0 -stream_loop -1 \
+    ffmpeg -stream_loop -1 \
     	-framerate "$FRAMERATE" \
     	-f concat i "$VIDEO" \
     	-i "$SOURCE" \
@@ -26,7 +26,7 @@ FRAMERATE="2"
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
-    	-f flv \
+    	-f mp4 \
     	"$YOUTUBE_URL/$KEY"
      ffplay -fflags nobuffer -flags low_delay -framedrop \
         -strict experimental -rtsp_transport tcp rtsp://2a01:4f8:13a:19e5:1041:fc65:e2c7:0001:22
