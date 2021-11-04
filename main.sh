@@ -20,16 +20,17 @@ FRAMERATE="1"
     	-qscale 3 \
     	-preset veryfast \
     	-vcodec libx264 \
+        -f x11grab
     	-pix_fmt yuv420p \
     	-maxrate 357k \
-    	-bufsize 405k \
+    	-bufsize 2800k \
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
     	-f flv \
     	"$YOUTUBE_URL/$KEY"
-     ffplay -f lavfi color=c=Black
-     [https://streamingv2.shoutcast.com/japanimradio-osaka]:display_number.screen_number[+x_offset,y_offset]
+     overlay=ffplay -f lavfi color=c=Black
+     overlay=[https://streamingv2.shoutcast.com/japanimradio-osaka]:display_number.screen_number[+x_offset,y_offset]
      
 #
 #  Created by Roman on 04/22/2019.
