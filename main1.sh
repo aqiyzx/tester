@@ -5,7 +5,7 @@ YOUTUBE_URL="rtmp://y.rtmp.youtube.com/live2?backup=1" # Youtube RTMP base URL
 IMAGE="https://images.hdqwalls.com/download/hartsune-miku-vocaloid-anime-girl-5k-1z-1280x720.jpg" #Picture
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
-SIZE="720x480"
+SIZE="1280x720"
 FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
