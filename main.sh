@@ -16,7 +16,7 @@ FRAMERATE="2"
     	-s "$SIZE" \
     	-ab 128k \
     	-b:v "$BITRATE" \
-    	-threads 6 \
+    	-threads 8 \
     	-qscale 3 \
     	-preset veryfast \
     	-vcodec libx264 \
