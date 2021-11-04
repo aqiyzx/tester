@@ -29,9 +29,10 @@ FRAMERATE="1"
         -fflags nobuffer \
     	-f flv rtmp://y.rtmp.youtube.com/live2?backup=1 \
     	"$YOUTUBE_URL/$KEY"
+        -filter_complex overlay -stream_loop -1 -i $VID
         ffplay -f lavfi color=c=Black \
         sysctl -w net.core.rmem_max=26214400
-        [http://curiosity.shoutca.st:8019/stream]:display_number.screen_number[+x_offset,y_offset]
+        [Host]:display_number.screen_number[+x_offset,y_offset]
    
 #
 #  Created by Roman on 04/22/2019.
