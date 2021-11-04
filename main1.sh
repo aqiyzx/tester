@@ -2,7 +2,7 @@ BITRATE="3127k" # Bitrate of the output video
 FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://y.rtmp.youtube.com/live2?backup=1" # Youtube RTMP base URL
-IMAGE="~/media/hartsune-miku-vocaloid-anime-girl-5k-1z-1280x720.jpg" #Picture
+IMAGE="~/root/media/hartsune-miku-vocaloid-anime-girl-5k-1z-1280x720.jpg" #Picture
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="1280x720"
