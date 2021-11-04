@@ -8,7 +8,7 @@ KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="980x720"
 FRAMERATE="2"
 
-    ffmpeg -re -loop 1 \
+    ffmpeg -f concat -safe 0 -stream_loop -1 \
     	-framerate "$FRAMERATE" \
     	-i "$IMAGE" \
     	-i "$SOURCE" \
