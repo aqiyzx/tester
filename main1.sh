@@ -31,7 +31,7 @@ FRAMERATE="1"
     	"$YOUTUBE_URL/$KEY"
         -filter_complex overlay -stream_loop -1 -i $VID
         ffplay -f lavfi \
-        sysctl net.core.rmem_max=26214400
+        net.core.rmem_max=26214400
    
 #
 #  Created by Roman on 04/22/2019.
