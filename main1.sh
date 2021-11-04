@@ -22,7 +22,7 @@ FRAMERATE="2"
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
     	-maxrate 1700k \
-    	-bufsize 27000k \
+    	-bufsize 3000k \
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
