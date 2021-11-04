@@ -21,7 +21,7 @@ FRAMERATE="2"
     	-preset veryfast \
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
-    	-maxrate 1500k \
+    	-maxrate 1800k \
     	-bufsize 25000k \
     	-framerate 30 \
     	-g 2 \
