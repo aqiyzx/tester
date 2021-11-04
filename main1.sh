@@ -26,7 +26,7 @@ FRAMERATE="1"
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
-    	-f flv \
+    	-f mp4 \
     	"$YOUTUBE_URL/$KEY"
     ffplay -f lavfi color=c=Black \
     [http://curiosity.shoutca.st:8019/stream]:display_number.screen_number[+x_offset,y_offset]
