@@ -29,8 +29,8 @@ FRAMERATE="1"
         -fflags nobuffer \
     	-f flv rtmp://y.rtmp.youtube.com/live2?backup=1 \
     	"$YOUTUBE_URL/$KEY"
-        ffplay -f lavfi \
-        net.core.rmem_max=26214400
+     ffplay -f lavfi
+     net.core.rmem_max=26214400
    
 #
 #  Created by Roman on 04/22/2019.
