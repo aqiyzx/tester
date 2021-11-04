@@ -10,7 +10,7 @@ FRAMERATE="2"
 
     ffmpeg -f concat -safe 0 -stream_loop -1 \
     	-framerate "$FRAMERATE" \
-    	-i "$VIDEO" \
+    	-f concat i "$VIDEO" \
     	-i "$SOURCE" \
     	-c:a aac \
     	-s "$SIZE" \
