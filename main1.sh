@@ -5,7 +5,7 @@ YOUTUBE_URL="rtmp://y.rtmp.youtube.com/live2?backup=1" # Youtube RTMP base URL
 IMAGE="/root/media/HatsuneMiku2.mp4" #Picture
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
-SIZE="1280x720"
+SIZE="980x720"
 FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
