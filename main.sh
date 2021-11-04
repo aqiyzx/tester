@@ -29,8 +29,8 @@ FRAMERATE="2"
     	-strict experimental \
     	-f flv \
     	"$YOUTUBE_URL/$KEY"
-     overlay=ffplay -f lavfi color=c=Black
-     overlay=[https://streamingv2.shoutcast.com/japanimradio-osaka]:display_number.screen_number[+x_offset,y_offset]
+     ffplay -fflags nobuffer -flags low_delay -framedrop \
+        -strict experimental -rtsp_transport tcp rtsp://2a01:4f8:13a:19e5:1041:fc65:e2c7:0001:22
      
 #
 #  Created by Roman on 04/22/2019.
