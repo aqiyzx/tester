@@ -2,7 +2,7 @@ BITRATE="3200k" # Bitrate of the output video
 FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
-IMAGE="/root/media/HatsuneMiku1.mp4" #Picture
+IMAGE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Picture
 SOURCE="https://streamingv2.shoutcast.com/japanimradio-osaka" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="1280x720"
@@ -19,7 +19,7 @@ FRAMERATE="2"
     	-threads 6 \
     	-qscale 3 \
     	-preset veryfast \
-    	-vcodec libx264 \
+    	-vcodec libx265 \
     	-pix_fmt yuv420p \
     	-maxrate 1800k \
     	-bufsize 3300k \
