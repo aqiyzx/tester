@@ -2,7 +2,7 @@ BITRATE="879k" # Bitrate of the output video
 FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
-IMAGE="/root/media/HatsuneMiku2.mp4" #Picture
+VIDEO="/root/media/HatsuneMiku2.mp4" #Video
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="980x720"
@@ -10,7 +10,7 @@ FRAMERATE="2"
 
     ffmpeg -f concat -safe 0 -stream_loop -1 \
     	-framerate "$FRAMERATE" \
-    	-i "$IMAGE" \
+    	-f concate -i "$IMAGE" -save 0 \
     	-i "$SOURCE" \
     	-c:a aac \
     	-s "$SIZE" \
