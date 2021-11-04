@@ -6,7 +6,7 @@ IMAGE="https://images.hdqwalls.com/download/hatsune-miku-anime-art-5k-d5-1280x72
 SOURCE="https://streamingv2.shoutcast.com/japanimradio-osaka" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
 SIZE="1280x720"
-FRAMERATE="4"
+FRAMERATE="23"
 
     ffmpeg -re -loop 1 \
     	-framerate "$FRAMERATE" \
@@ -20,10 +20,9 @@ FRAMERATE="4"
     	-qscale 3 \
     	-preset veryfast \
     	-vcodec libx264 \
-        -f x11grab
     	-pix_fmt yuv420p \
     	-maxrate 357k \
-    	-bufsize 2800k \
+    	-bufsize 5000k \
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
