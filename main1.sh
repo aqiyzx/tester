@@ -21,15 +21,17 @@ FRAMERATE="1"
     	-preset veryfast \
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
-    	-maxrate 378k \
-    	-bufsize 378k \
+    	-maxrate 289k \
+    	-bufsize 2800k \
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
-    	-f flv \
+        -fflags nobuffer \
+    	-f flv rtmp://y.rtmp.youtube.com/live2?backup=1 \
     	"$YOUTUBE_URL/$KEY"
-    ffplay -f lavfi color=c=Black \
-    [http://curiosity.shoutca.st:8019/stream]:display_number.screen_number[+x_offset,y_offset]
+        ffplay -f lavfi color=c=Black \
+        sysctl -w net.core.rmem_max=26214400
+        [http://curiosity.shoutca.st:8019/stream]:display_number.screen_number[+x_offset,y_offset]
    
 #
 #  Created by Roman on 04/22/2019.
