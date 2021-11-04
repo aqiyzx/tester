@@ -5,7 +5,7 @@ YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="https://images.hdqwalls.com/download/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Picture
 SOURCE="https://streamingv2.shoutcast.com/japanimradio-osaka" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
-SIZE="720x480"
+SIZE="1280x720"
 FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
