@@ -29,7 +29,6 @@ FRAMERATE="1"
         -fflags nobuffer \
     	-f flv rtmp://y.rtmp.youtube.com/live2?backup=1 \
     	"$YOUTUBE_URL/$KEY"
-        -filter_complex overlay -stream_loop -1 -i $VID
         ffplay -f lavfi \
         net.core.rmem_max=26214400
    
