@@ -1,11 +1,11 @@
-BITRATE="1930k" # Bitrate of the output video
+BITRATE="2300k" # Bitrate of the output video
 FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Image
 SOURCE="http://curiosity.shoutca.st:8019/stream" # Radio Station
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
-SIZE="980x720"
+SIZE="1280x720"
 FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
@@ -21,8 +21,8 @@ FRAMERATE="2"
     	-preset veryfast \
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
-    	-maxrate 2300k \
-    	-bufsize 5000k \
+    	-maxrate 2700k \
+    	-bufsize 6000k \
     	-framerate 30 \
     	-g 2 \
     	-strict experimental \
