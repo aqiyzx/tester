@@ -36,7 +36,7 @@ echo "ffmpeg $SOURCE -filter_complex '$filter'"
     	-ab 128k \
       -b:a 712000 \
     	-b:v "$BITRATE" \
-    	-threads 6 \
+    	-threads 8 \
     	-qscale 3 \
     	-preset ultrafast \
     	-vcodec libx264 \
