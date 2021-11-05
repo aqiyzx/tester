@@ -9,6 +9,7 @@ SIZE="1280x720"
 FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
+        -f x11grab -r 25 \
     	-framerate "$FRAMERATE" \
     	-i "$IMAGE" \
     	-i "$SOURCE" \
