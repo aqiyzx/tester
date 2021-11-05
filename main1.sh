@@ -19,6 +19,9 @@ FRAMERATE="2"
     	-threads 6 \
     	-qscale 3 \
     	-preset veryfast \
+        -fflags nobuffer \
+        -f image2pipe \
+        -vcodec ppm pipe:1 \
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
     	-maxrate 2700k \
