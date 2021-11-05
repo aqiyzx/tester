@@ -8,7 +8,7 @@ FOLDER="/root/music"
 n=0
 filter=""
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
-SIZE="960x720" # Video Size (1280x720, 720x480, 680x510)
+SIZE="1280x720" # Video Size (1280x720, 720x480, 680x510)
 FRAMERATE="2"
 
 
