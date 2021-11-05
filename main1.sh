@@ -16,7 +16,7 @@ FRAMERATE="2"
     	-s "$SIZE" \
     	-ab 128k \
     	-b:v "$BITRATE" \
-    	-thread_queue_size 8 \
+    	-thread_queue_size 6 \
     	-qscale 3 \
     	-preset veryfast \
         -fflags nobuffer \
