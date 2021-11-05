@@ -9,7 +9,7 @@ SIZE="1280x720"
 FRAMERATE="2"
 
     ffmpeg -re -loop 1 \
-        -f x11grab -r 25 -video_size "$SIZE" cif -i :0.0 "$IMAGE" \
+        -f x11grab -r 25 -video_size cif -i :0.0 "$IMAGE" \
     	-framerate "$FRAMERATE" \
     	-i "$IMAGE" \
     	-i "$SOURCE" \
