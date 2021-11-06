@@ -38,7 +38,7 @@ echo "ffmpeg $SOURCE -filter_complex '$filter'"
     	-b:v "$BITRATE" \
     	-threads 8 \
     	-qscale 3 \
-    	-preset ultrafast \
+    	-preset veryfast \
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
     	-maxrate 2300k \
