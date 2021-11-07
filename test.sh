@@ -9,6 +9,7 @@ IMAGE_SOURCE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg"
 AUDIO_SOURCE="/root/media/music/list.txt"
 AUDIO_ENCODER="aac"
 SIZE="1280X720"
+FRAMERATE="2"
 
 ffmpeg \
  -stream_loop -1 \
@@ -16,7 +17,7 @@ ffmpeg \
  -i "$VIDEO_SOURCE" \
  -thread_queue_size 512 \
  -i "$AUDIO_SOURCE" \
- -c:v libx264 -s "$SIZE" -preset $QUAL -r $FPS -g $(($FPS *2)) -b:v $VBR \
+ -c:v libx264 -s "$SIZE" -preset $QUAL -r $FPS -framerate 30 -g 2 -b:v $VBR -strict experimental \
  -c:a $AUDIO_ENCODER -threads 8 -qscale 3 -ar 44100 -b:a 128k -bufsize 5000k -pix_fmt yuv420p \
  -fflags +shortest -max_interleave_delta 50000 \
  -f flv $YOUTUBE_URL/$YOUTUBE_KEY
