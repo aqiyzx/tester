@@ -14,27 +14,26 @@ FRAMERATE="2"
     ffmpeg -re -loop 1 \
       -framerate "$FRAMERATE" \
       -i "$IMAGE" \
-      -i "$FOLDER"/*.mp3 -filter_complex \
-      -map "[v]" -map "[a]" -deinterlace \
+      -i "$FOLDER"/*.mp3 -filter_complex -map "[v]" -map "[a]" -deinterlace \
       -c:a aac \
     	-s "$SIZE" \
       -acodec libmp3lame \
       -ar 44100 \
     	-ab 128k \
       -b:a 712000 \
-    	-b:v "$BITRATE" \
-    	-threads 8 \
-    	-qscale 3 \
-    	-preset normal \
-    	-vcodec libx264 \
-    	-pix_fmt yuv420p \
-    	-maxrate 2500k \
-    	-bufsize 5000k \
-    	-framerate 30 \
-    	-g 2 \
-    	-strict experimental \
-    	-f flv \
-    	"$YOUTUBE_URL/$KEY"
+      -b:v "$BITRATE" \
+      -threads 8 \
+      -qscale 3 \
+      -preset normal \
+      -vcodec libx264 \
+      -pix_fmt yuv420p \
+      -maxrate 2500k \
+      -bufsize 5000k \
+      -framerate 30 \
+      -g 2 \
+      -strict experimental \
+      -f flv \
+      "$YOUTUBE_URL/$KEY"
  
  
  #
