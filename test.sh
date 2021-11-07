@@ -3,7 +3,7 @@
 VBR="2500k"
 FPS="30"
 QUAL="normal"
-YOUTUBE_URL=" rtmp://x.rtmp.youtube.com/live2"
+YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2"
 YOUTUBE_KEY="rtb2-3kde-30af-jyre-463g"
 IMAGE_SOURCE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg"
 AUDIO_SOURCE="/root/media/music/list.txt"
