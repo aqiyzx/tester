@@ -17,7 +17,6 @@ for f in "$FOLDER"/*.mp3
 do
   SOURCE="$SOURCE -i $f"
   filter="$filter [$n:v:0] [$n:a:0]"
-  ((n++))
 done
 
 filter="$filter" concat=n=$n:v=1:a=1 [v] [a]"
