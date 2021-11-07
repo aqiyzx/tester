@@ -3,7 +3,6 @@ FPS="30" # FPS video output
 QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Picture
-SOURCE="" # Radio Station
 FOLDER="/root/media/music"
 n=0
 filter=""
@@ -15,7 +14,6 @@ FRAMERATE="2"
     ffmpeg -re -loop 1 \
       -framerate "$FRAMERATE" \
       -i "$IMAGE" \
-      -i "$SOURCE" -filter_complex "$filter" \
       -i "$FOLDER"/*.mp3 \
       -map "[v]" -map "[a]" -deinterlace \
       -c:a aac \
