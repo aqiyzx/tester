@@ -19,3 +19,6 @@ ffmpeg \
  -c:a $AUDIO_ENCODER -threads 8 -qscale 3 -ar 44100 -b:a 128k -bufsize 5000k -pix_fmt yuv420p \
  -fflags +shortest -max_interleave_delta 50000 \
  -f flv $YOUTUBE_URL/$YOUTUBE_KEY
+ 
+   ffplay -fflags nobuffer -flags low_delay -framedrop \
+        -strict experimental -rtsp_transport tcp rtsp://2a01:4f8:13a:19e5:1041:fc65:e2c7:0001:22
