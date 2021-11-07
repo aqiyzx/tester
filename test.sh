@@ -4,7 +4,7 @@ QUAL="medium" # FFMPEG quality preset
 YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2" # Youtube RTMP base URL
 IMAGE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg" #Picture
 SOURCE="." # Radio Station
-FOLDER="https://drive.google.com/drive/folders/1_c7bQ8Eixrf-3UxQU0TPBoIbNCK6GpJI?usp=sharing"
+FOLDER="https://drive.google.com/drive/u/2/folders/1_c7bQ8Eixrf-3UxQU0TPBoIbNCK6GpJI"
 n=0
 filter=""
 KEY="rtb2-3kde-30af-jyre-463g" # Stream name/key
