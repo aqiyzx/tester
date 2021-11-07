@@ -1,36 +1,21 @@
 #! /bin/bash
-#
-# Diffusion youtube avec ffmpeg
 
-# Configurer youtube avec une résolution 720p. La vidéo n'est pas scalée.
-
-VBR="2500k"                                                             # Bitrate de la vidéo en sortie
-FPS="30"                                                                # FPS de la vidéo en sortie
-QUAL="medium"                                                           # Preset de qualité FFMPEG
-YOUTUBE_URL="rtmp://x.rtmp.youtube.com/live2"                           # URL de base RTMP youtube
-IMAGE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg"           #Picture
-
-FOLDER="/root/media/music"                                         # Dossier source
-KEY="rtb2-3kde-30af-jyre-463g"                                     # Clé à récupérer sur l'event youtube
-
-SOURCE=""
-n=0
-filter=""
-
-for f in $FOLDER/*.mp3
-do
-  SOURCE="$SOURCE -i $f"
-  filter="$filter [$n:v:0] [$n:a:0]"
-  ((n++))
-done
-
-filter="$filter concat=n=$n:v=1:a=1 [v] [a]"
-
-echo "ffmpeg $SOURCE -filter_complex '$filter'"
+VBR="2500k"
+FPS="30"
+QUAL="normal"
+YOUTUBE_URL=" rtmp://x.rtmp.youtube.com/live2"
+YOUTUBE_KEY="rtb2-3kde-30af-jyre-463g"
+IMAGE_SOURCE="/root/media/hatsune-miku-anime-art-5k-d5-1280x720.jpg"
+AUDIO_SOURCE="/root/media/music/*.mp3"
+AUDIO_ENCODER="aac"
 
 ffmpeg \
-    $SOURCE -filter_complex "$filter" \
--map "[v]" -map "[a]" -deinterlace \
-    -vcodec libx264 -pix_fmt yuv420p -preset $QUAL -r $FPS -g $(($FPS)) -b:v $VBR \
-    -acodec libmp3lame -ar 44100 -threads 6 -qscale 3 -b:a 712000 -bufsize 512k \
-    -f flv "$YOUTUBE_URL/$KEY"
+ -stream_loop -1 \
+ -re \
+ -i "$VIDEO_SOURCE" \
+ -thread_queue_size 512 \
+ -i "$AUDIO_SOURCE" \
+ -c:v libx264 -preset $QUAL -r $FPS -g $(($FPS *2)) -b:v $VBR \
+ -c:a $AUDIO_ENCODER -threads 8 -qscale 3 -ar 44100 -b:a 128k -bufsize 5000k -pix_fmt yuv420p \
+ -fflags +shortest -max_interleave_delta 50000 \
+ -f flv $YOUTUBE_URL/$YOUTUBE_KEY
