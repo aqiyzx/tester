@@ -14,7 +14,7 @@ FRAMERATE="2"
     ffmpeg -re -loop 1 \
       -framerate "$FRAMERATE" \
       -i "$IMAGE" \
-      -i "$FOLDER"/*.mp3 \
+      -i "$FOLDER"/*.mp3 -filter_complex \
       -map "[v]" -map "[a]" -deinterlace \
       -c:a aac \
     	-s "$SIZE" \
