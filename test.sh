@@ -12,21 +12,11 @@ SIZE="1280x720" # Video Size (1280x720, 720x480, 680x510)
 FRAMERATE="2"
 
 
-
-for f in "$FOLDER"/*.mp3
-do
-  SOURCE="$SOURCE -i $f"
-  filter="$filter [$n:v:0] [$n:a:0]"
-done
-
-filter="$filter" concat=n=$n:v=1:a=1 [v] [a]"
-
-echo "ffmpeg $SOURCE -filter_complex '$filter'"
-
     ffmpeg -re -loop 1 \
       -framerate "$FRAMERATE" \
       -i "$IMAGE" \
       -i "$SOURCE" -filter_complex "$filter" \
+      -i "$FOLDER"/*.mp3 \
       -map "[v]" -map "[a]" -deinterlace \
       -c:a aac \
     	-s "$SIZE" \
@@ -40,7 +30,7 @@ echo "ffmpeg $SOURCE -filter_complex '$filter'"
     	-preset normal \
     	-vcodec libx264 \
     	-pix_fmt yuv420p \
-    	-maxrate 2300k \
+    	-maxrate 2500k \
     	-bufsize 5000k \
     	-framerate 30 \
     	-g 2 \
